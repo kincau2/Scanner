@@ -16,7 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
+function Search(url){
+   var ref = cordova.InAppBrowser.open(url,'_blank','location=yes');
+}
+  
 function Scan(){
    cordova.plugins.barcodeScanner.scan(
       function (result) {
@@ -29,6 +32,7 @@ function Scan(){
          var code = result.text;
          var url = "http://search.books.com.tw/search/query/key/" + code + "/cat/all";
          alert("url : " + url);
+         Search(url);
       },
       function (error) {
           alert("Scanning failed: " + error);
