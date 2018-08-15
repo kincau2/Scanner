@@ -2,14 +2,15 @@
 <widget id="com.lifewellgroup.scanner" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Scanner</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Scanner APP aims to scan barcode and redirect to online shop with the shop's API.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="kincau2@hotmail.com" href="http://phonegap.com">
+        Luis
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
