@@ -60,11 +60,12 @@
         window.onload = function(){
             app.initialize();
             var code;
-            code = document.getElementById("btnScan").addEventListener("click",function(){
-                        Scan(code);
-                   });
-            var url = "http://search.books.com.tw/search/query/key/" + code + "/cat/all";
-            alert("url : " + url);
+            document.getElementById("btnScan").addEventListener("click",function(){
+                code = Scan(code);
+                var url = "http://search.books.com.tw/search/query/key/" + code + "/cat/all";
+                alert("url : " + url);
+            });
+            
            };
     </script>
 </body>
