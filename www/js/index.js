@@ -17,13 +17,16 @@
  * under the License.
  */
 
-function Scan(){
+function Scan(code){
    cordova.plugins.barcodeScanner.scan(
       function (result) {
+         /*
           alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
+         */
+         code = result.text 
       },
       function (error) {
           alert("Scanning failed: " + error);
@@ -42,6 +45,7 @@ function Scan(){
           disableSuccessBeep: false // iOS and Android
       }
    );
+   return code;
 }
     
 var app = {
