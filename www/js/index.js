@@ -17,7 +17,7 @@
  * under the License.
  */
 
-function Scan(code){
+function Scan(){
    cordova.plugins.barcodeScanner.scan(
       function (result) {
          /*
@@ -26,7 +26,9 @@ function Scan(code){
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
          */
-         code = result.text 
+         var code = result.text;
+         var url = "http://search.books.com.tw/search/query/key/" + code + "/cat/all";
+         alert("url : " + url);
       },
       function (error) {
           alert("Scanning failed: " + error);
