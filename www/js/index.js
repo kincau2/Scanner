@@ -31,7 +31,7 @@ function Scan(){
          */
          var code = result.text;
          var url = "http://search.books.com.tw/search/query/key/" + code + "/cat/all";
-         alert("url : " + url);
+         // alert("url : " + url);
          Search(url);
       },
       function (error) {
