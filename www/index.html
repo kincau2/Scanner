@@ -59,11 +59,13 @@
     <script type="text/javascript">
         window.onload = function(){
             app.initialize();
-            document.getElementById("btnScan").addEventListener("click",function(){
-                Scan();
-                //alert("Button Tapped");
-            });
-        };
+            var code;
+            code = document.getElementById("btnScan").addEventListener("click",function(){
+                        Scan(code);
+                   });
+            var url = "http://search.books.com.tw/search/query/key/" + code + "/cat/all";
+            alert("url : " + url);
+           };
     </script>
 </body>
 
